@@ -1,0 +1,17 @@
+.min-historie-kasse {
+  background-color: #c9d0a6;
+  padding-top: 50px;
+  margin-top: 70px;
+  border-radius: var(--border-radius-box);
+}
+
+.title {
+  display: inline-block;
+  background-color: var(--color-h1-h2-bg);
+  padding: 4px 100px 4px 40px;
+  border-radius: var(--border-radius-title-box);
+}
+
+.tekst {
+  padding: 30px 50px 60px 50px;
+}

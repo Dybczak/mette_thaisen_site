@@ -1,0 +1,364 @@
+/* Vi starter med at lave vores custom css. Dvs. vi henter vores fonte ind og laver variablerne til den styling som er gennemgående på hele vorres hjemmeside
+Herefter laver vi variabler med de farver som er gennemgående til hele vores hjemmeside */
+
+/********* CUSTOM PROPERTIES **********/
+:root {
+  /* FONTS */
+  --font-h1-h2: "Angkor", serif;
+  --font-h3: "Alike", serif;
+  --font-p-og-button: "IBM Plex Serif", serif;
+
+  --font-h1-h2-size: 2rem;
+  --font-h3-size: 1.5rem;
+  --font-p-size: 1rem;
+
+  --font-letter-spacing: 5%;
+
+  --font-btn-size: 1rem;
+
+  /* FARVER */
+  --color-header: #ebdbc4;
+  --color-footer: #949d68;
+  --color-bg: #f5ece5;
+  --color-box-bg: #c9d0a6;
+  --color-banner-bg: #757e63;
+
+  --color-h1-h2: #b34e38;
+  /* --color-h3: #fbf3eb; */
+  --color-h1-h2-bg: #ebdbc4;
+
+  --color-btn1-bg: #ce8a7b;
+  --color-btn1-bg-hover: #c1604b;
+  --color-btn1-font: #ffffff;
+
+  --color-btn2-bg: #ffd794;
+  --color-btn2-bg-hover: #e3b787;
+  --color-btn2-font: #000;
+
+  /* BORDERS */
+  --border-radius-btn: 6px;
+  --border-radius-booking-btn: 18px;
+  --border-radius-box: 6px;
+  --border-radius-title-box: 0px 6px 6px 0px;
+  --box-shadow: #b8b8b8 4px 4px 4px;
+  --box-shadow-header: #b8b8b8 0px 4px 4px;
+
+  /* MARGIN & PADDING */
+  --margin-btn-block: 1rem;
+  --padding-inline-main: 100px;
+  --padding-btn: 5px 25px;
+}
+
+/**************** RESET ***************/
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  interpolate-size: allow-keywords;
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+h1,
+h2 {
+  line-height: 1.25;
+}
+p,
+li {
+  text-wrap: pretty;
+}
+img,
+svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+label {
+  display: block;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  font-size: max(1em, 16px);
+}
+textarea {
+  resize: none;
+  min-height: 4lh;
+}
+legend {
+  padding: 0;
+}
+select,
+::picker(select) {
+  appearance: base-select;
+}
+
+/**************** RESET ***************/
+
+/* Nu laver vi den gennemgående styling på vores side, og her bruger vi de custom properties vi lavede øverst i css´en. 
+   (det gør vi for at gøre det nemmere for os selv nu, og for at sikre os at vi alle bruger de samme farver og fonte når vi senere skal kode hver vores underside på den samme hjemmeside) */
+
+/**************** FONTS ***************/
+h1,
+h2 {
+  font-family: var(--font-h1-h2);
+  font-weight: bold;
+  font-style: normal;
+  font-size: var(--font-h1-h2-size);
+  letter-spacing: var(--font-letter-spacing);
+  color: var(--color-h1-h2);
+}
+
+/* h3 {
+  font-family: var(--font-h3);
+  font-weight: 400;
+  font-style: normal;
+  font-size: var(--font-h3-size);
+  color: var(--color-h3);
+} */
+
+p {
+  font-family: var(--font-p-og-button);
+  font-weight: 400;
+  font-style: normal;
+  font-size: var(--font-p-size);
+  letter-spacing: var(--font-letter-spacing);
+  line-height: 160%;
+}
+
+/************** BUTTONS ***************/
+
+.button1 {
+  font-family: var(--font-p-og-button);
+  font-weight: 400;
+  font-size: var(--font-btn-size);
+  letter-spacing: var(--font-letter-spacing);
+  color: var(--color-btn1-font);
+  background-color: var(--color-btn1-bg);
+  border-radius: var(--border-radius-btn);
+  box-shadow: var(--box-shadow);
+  border: none;
+
+  margin-block: var(--margin-btn-block);
+  padding: var(--padding-btn);
+}
+
+.button1:hover {
+  background-color: var(--color-btn1-bg-hover);
+}
+
+.button2 {
+  font-family: var(--font-p-og-button);
+  font-weight: 400;
+  font-size: var(--font-btn-size);
+  letter-spacing: var(--font-letter-spacing);
+  color: var(--color-btn2-font);
+  background-color: var(--color-btn2-bg);
+  border-radius: var(--border-radius-btn);
+  box-shadow: var(--box-shadow);
+  border: none;
+
+  margin-block: var(--margin-btn-block);
+  padding: var(--padding-btn);
+}
+
+.button2:hover {
+  background-color: var(--color-btn2-bg-hover);
+}
+
+.booking-btn {
+  font-family: var(--font-p-og-button);
+  font-weight: 400;
+  font-size: var(--font-btn-size);
+  letter-spacing: var(--font-letter-spacing);
+  color: var(--color-btn2-font);
+  background-color: var(--color-btn2-bg);
+  border-radius: var(--border-radius-booking-btn);
+  box-shadow: var(--box-shadow);
+  border: solid 0.5px #e3b787;
+
+  margin-block: var(--margin-btn-block);
+  padding: 10px 30px;
+}
+
+.booking-btn:hover {
+  background-color: var(--color-btn2-bg-hover);
+}
+
+/*************** HEADER ***************/
+
+/* vi ligger menuen ud i højre side ved at bruge space-between, da det flytter elementerne så langt fra hinanden som muligt (vi har kun to elementer; logo og nav) */
+header {
+  position: sticky;
+  display: flex;
+  background-color: var(--color-header);
+  justify-content: space-between;
+  padding: 10px 80px 10px 30px;
+  box-shadow: var(--box-shadow-header);
+  z-index: 1000;
+}
+
+header img {
+  width: 300px;
+  height: auto;
+  padding-top: 6px;
+}
+
+/* sætter teksten i midten på y-aksen */
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+#aktiv {
+  color: #b34e38;
+}
+
+/* Fjerner tekst-styling på linkene */
+.menu a {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: black;
+}
+
+.menu a:hover {
+  color: #b34e38;
+}
+
+.menu li {
+  display: flex;
+  align-items: center;
+}
+
+/* Vi sætter 'booking:hover' funktionen her, så den overrider 'menu a:hover' */
+.booking-btn a:hover {
+  color: #000;
+}
+
+/* styling af burgermenu streger, og gør burgermenuen usynlig i desktop */
+.burger {
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+  display: none;
+}
+
+.burger .line {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #333333;
+  margin-bottom: 5px;
+  transition: 0.2s linear;
+}
+
+/************************ burgermenu ******************/
+
+@media (max-width: 800px) {
+  .menu {
+    display: none;
+  }
+
+  .burger {
+    display: block;
+    background-color: transparent;
+    border: 0;
+  }
+
+  .burger.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+    transition: 0.2s linear;
+  }
+
+  .burger.active .line:nth-child(2) {
+    opacity: 0;
+    transition: 0.15s linear;
+  }
+
+  .burger.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+    transition: 0.2s linear;
+  }
+
+  /* burgermenuen når den er foldet ud */
+  nav.active .menu {
+    display: block;
+    background-color: var(--color-header);
+    position: absolute;
+    top: 85px;
+    right: 0;
+    width: 50%;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+  }
+
+  /* margin i top/bund og siderne når menuen er foldet ud */
+  nav.active .menu li {
+    margin: 10px 20px;
+  }
+}
+/*************** FOOTER ***************/
+
+footer {
+  background-color: var(--color-footer);
+  padding: 15px 30px 15px 30px;
+  margin-top: 70px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-tekst p {
+  color: #f5ece5;
+  line-height: 250%;
+}
+
+.certifikater {
+  display: flex;
+  gap: 30px;
+}
+
+/* Ved at sætte height: auto, bliver den ikke strukket ud (flad) */
+footer img {
+  width: 70px;
+  height: auto;
+}
+
+/**************** BODY & MAIN ****************/
+
+body {
+  background-color: var(--color-bg);
+}
+
+main {
+  padding-inline: var(--padding-inline-main);
+}
+
+/* vi laver en class som vi kan tillægge de elementer vi gerne vil have har den baggrundsfarve, som vi på vores styletile har tillagt brødtekst */
+.box {
+  background-color: var(--color-box-bg);
+  border-radius: var(--border-radius-box);
+}
+
+/* NÆSTE OPGAVEE/TRIN. 
+- Vi skal lave margener (variabler) på tekst
+- header - nav, li, button, flex-end, align-items
+- footer */
