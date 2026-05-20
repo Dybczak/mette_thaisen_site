@@ -1,0 +1,223 @@
+/*****BOX1*****/
+.box1 {
+  background-color: var(--color-bg);
+  margin-bottom: 3rem;
+}
+.h1-forløb {
+  margin-top: 2rem;
+  margin-left: 2rem;
+}
+
+.beskrivelse {
+  margin-top: 1rem;
+  padding: 3rem;
+}
+.værdiord {
+  color: var(--color-h1-h2);
+  margin-bottom: 2rem;
+}
+.værdiord_btn {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.behandling-billede {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .grid_1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .behandling-billede {
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding-top: 0;
+  }
+}
+/*****BOX2*****/
+.box2 p {
+  background-color: var(--color-header);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.overskrift_box2 {
+  text-align: center;
+  padding-top: 3rem;
+}
+
+.iconer {
+  align-items: center;
+  margin: 3rem 0 3rem 0;
+  width: 50%;
+}
+@media (min-width: 768px) {
+  .grid_1-1-1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2rem;
+    padding: 2rem;
+    background-color: var(--color-header);
+  }
+  .tekst_box2 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .overskrift_box2 {
+    text-align: center;
+    padding-top: 3rem;
+    background-color: var(--color-header);
+  }
+}
+/********BOX3*****/
+/***
+.box3 styrer hele baggrunden
+.innerbox3 er bare et “kort” inde i den (ikke absolute!)
+Ingen overlap-problemer
+Tekst er inde i den mørke box***/
+
+.box3 {
+  background-color: var(--color-box-bg);
+  position: relative; /* Gør det muligt at placere banneret inden for denne boks */
+  width: 100%; /* Gør boksen fuld bredde */
+  min-height: 500px; /* Giv boksen en minimumshøjde for at sikre, at den har nok plads til indholdet */
+  padding: 30px; /* Tilføjer indvendig margin for at give plads til indholdet */
+}
+
+.innerbox3 {
+  display: flex; /* Brug flexbox til at arrangere indholdet */
+  flex-direction: column; /* Arranger indholdet i en kolonne */
+  align-items: flex-end; /* Juster indholdet til venstre */
+  border-radius: 10px;
+  background-color: var(--color-bg);
+  padding: 3rem;
+  margin-top: 1rem;
+  .special_h3 {
+    color: var(--color-h1-h2);
+    margin-top: 1rem;
+  }
+}
+
+.banner_3 {
+  background-color: var(--color-header);
+  padding: 10px;
+  border-radius: var(--border-radius-box);
+  display: flex; /* Brug flexbox til at arrangere indholdet */
+  justify-content: flex-start; /* Juster teksten til venstre */
+}
+
+.certifikat {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.tekst_box3 {
+  margin-bottom: 1rem;
+}
+
+/********BOX4*****/
+.box4 {
+  background-color: var(--color-bg);
+  position: relative; /* Gør det muligt at placere banneret inden for denne boks */
+  width: 100%; /* Gør boksen fuld bredde */
+  min-height: 500px; /* Giv boksen en minimumshøjde for at sikre, at den har nok plads til indholdet */
+  padding: 30px; /* Tilføjer indvendig margin for at give plads til indholdet */
+}
+
+.innerbox4 {
+  display: flex; /* Brug flexbox til at arrangere indholdet */
+  flex-direction: column; /* Arranger indholdet i en kolonne */
+  align-items: flex-start; /* Juster indholdet til venstre */
+  border-radius: 10px;
+  background-color: var(--color-header);
+  max-width: 800px; /* Begrænser bredden på indholdet for bedre læsbarhed */
+  padding: 3rem;
+}
+
+.banner_4 {
+  margin-top: 1rem;
+  background-color: var(--color-bg);
+  padding: 10px;
+  border-radius: var(--border-radius-box);
+  display: flex; /* Brug flexbox til at arrangere indholdet */
+  justify-content: flex-start; /* Juster teksten til venstre */
+}
+.cirkel_box4 {
+  padding: 120px;
+  gap: 20px;
+}
+.cirkel {
+  gap: 30px; /* Tilføj mellemrum mellem cirklerne */
+  width: 130px; /* Gør cirklen kvadratisk */
+  height: 130px; /* Gør cirklen kvadratisk */
+  background-color: var(--color-banner-bg);
+  border-radius: 50%; /* Gør elementet til en cirkel */
+  display: flex; /* Brug flexbox til at arrangere indholdet */
+  justify-content: center; /* lodret */
+  align-items: center; /* vandret */
+  text-align: center;
+  color: white;
+  font-size: var(--font-p-size);
+}
+
+.btn_box4 {
+  text-align: center;
+}
+
+/*****box5*****/
+.box5 {
+  background-color: var(--color-box-bg);
+  display: grid;
+  grid-template-columns: 1fr 9fr 1fr; /* Tre kolonner: en smal, en bred, og en smal */
+  align-items: center; /* Juster alle elementer i midten */
+  padding: 10px;
+  .Situationstegn-venstre {
+    color: var(--color-banner-bg);
+    font-size: 3rem;
+    font-weight: bold;
+    align-self: start; /* Placerer det øverst i grid */
+  }
+  .Situationstegn-højre {
+    color: var(--color-banner-bg);
+    font-size: 3rem;
+    font-weight: bold;
+    align-self: end; /* Placerer det nederst i grid */
+  }
+  .tekst_box5 {
+    font-size: var(--font-p-og-button);
+    text-align: center;
+  }
+}
+
+/*****box6*****/
+.box6 {
+  background-color: var(--color-header);
+  padding: 40px;
+}
+
+.konsultation_img {
+  display: grid;
+  grid-template-columns: 1fr; /* En kolonne */
+  justify-items: center; /* Juster billedet i midten af grid-cellen */
+  width: 100%;
+  height: auto;
+  align-self: center; /* Juster billedet i midten af grid-cellen */
+}
+
+/****box7*****/
+.box7 {
+  background-color: var(--color-bg);
+
+  .tekst_box7 {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: var(--font-p-og-button);
+  }
+  .button2 {
+    align-items: center;
+  }
+}
