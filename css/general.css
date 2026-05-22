@@ -4,7 +4,7 @@ Herefter laver vi variabler med de farver som er gennemgående til hele vores hj
 /********* CUSTOM PROPERTIES **********/
 :root {
   /* FONTS */
-  --font-h1-h2: "Angkor", serif;
+  --font-h1-h2: "Crete Round", serif;
   --font-h3: "Alike", serif;
   --font-p-og-button: "IBM Plex Serif", serif;
 
@@ -45,7 +45,6 @@ Herefter laver vi variabler med de farver som er gennemgående til hele vores hj
 
   /* MARGIN & PADDING */
   --margin-btn-block: 1rem;
-  --padding-inline-main: 100px;
   --padding-btn: 5px 25px;
 }
 
@@ -199,6 +198,7 @@ p {
 /* vi ligger menuen ud i højre side ved at bruge space-between, da det flytter elementerne så langt fra hinanden som muligt (vi har kun to elementer; logo og nav) */
 header {
   position: sticky;
+  top: 0;
   display: flex;
   background-color: var(--color-header);
   justify-content: space-between;
@@ -270,6 +270,16 @@ nav {
 /************************ burgermenu ******************/
 
 @media (max-width: 800px) {
+  /* HEADER */
+  header {
+    padding-right: 30px;
+  }
+
+  header img {
+    width: 200px;
+    height: auto;
+  }
+
   .menu {
     display: none;
   }
@@ -300,7 +310,7 @@ nav {
     display: block;
     background-color: var(--color-header);
     position: absolute;
-    top: 85px;
+    top: 65px;
     right: 0;
     width: 50%;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
@@ -310,6 +320,11 @@ nav {
   /* margin i top/bund og siderne når menuen er foldet ud */
   nav.active .menu li {
     margin: 10px 20px;
+  }
+
+  /* BOOKING BTN */
+  .booking-btn {
+    width: 105px;
   }
 }
 /*************** FOOTER ***************/
@@ -346,10 +361,6 @@ footer img {
 
 body {
   background-color: var(--color-bg);
-}
-
-main {
-  padding-inline: var(--padding-inline-main);
 }
 
 /* vi laver en class som vi kan tillægge de elementer vi gerne vil have har den baggrundsfarve, som vi på vores styletile har tillagt brødtekst */
