@@ -1,107 +1,180 @@
 <!doctype html>
 <html lang="da">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="css/general.css" />
-    <link rel="stylesheet" href="css/index.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Crete+Round:ital@0;1&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Alike&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&display=swap"
-      rel="stylesheet"
-    />
+  <link rel="stylesheet" href="css/general.css" />
+  <link rel="stylesheet" href="css/index.css" />
 
-    <title>Forside</title>
-  </head>
-  <body>
-    <header>
-      <img src="img/logo.svg" alt="logo" />
-      <nav>
-        <ul class="menu">
-          <li><a href="om_mig.html">Om mig</a></li>
-          <li><a href="forloeb.html">Forløb</a></li>
-          <li><a href="kommer_snart.html">Praktisk information</a></li>
-          <li class="booking-btn"><a href="kommer_snart.html">Book</a></li>
-        </ul>
-        <button class="burger" aria-label="menu">
-          <span class="line"></span>
-          <span class="line"></span>
-          <span class="line"></span>
-        </button>
-      </nav>
-    </header>
-    <main>
-      <h1>Oæøå</h1>
-      <div class="box">
-        <h2>Overskrift</h2>
-        <h3>Underoverskrift</h3>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aut,
-          commodi temporibus magnam sint, maxime animi a doloremque dolorem
-          explicabo minus provident autem eius eaque alias neque rem repellendus
-          omnis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis,
-          cumque impedit aspernatur consequatur dolore nesciunt autem ex minima
-          magnam? Animi sapiente quisquam exercitationem, provident at harum
-          porro amet beatae error. Lorem ipsum dolor, sit amet consectetur
-          adipisicing elit. Cupiditate eveniet magni asperiores maxime velit
-          esse! Voluptates non, sapiente doloribus quis minima sunt aspernatur
-          ex maiores tempore possimus laborum, neque unde!
-        </p>
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Angkor&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Alike&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&display=swap" rel="stylesheet" />
+
+  <title>Forside</title>
+</head>
+
+<body>
+  <header>
+    Karsten
+    <img src="img/logo.svg" alt="logo" />
+    <nav>
+      <ul class="menu">
+        <li><a href="om_mig.html">Om mig</a></li>
+        <li><a href="forloeb.html">Forløb</a></li>
+        <li><a href="kommer_snart.html">Praktisk information</a></li>
+        <li class="booking-btn"><a href="kommer_snart.html">Book</a></li>
+      </ul>
+      <button class="burger" aria-label="menu">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </button>
+    </nav>
+  </header>
+  <main>
+
+    <!-- I min mobil skal kropsterapi tekstboksen være i div med illustrationerne for at lave min baggrundsfarve, men i desktop skal den ikke være i div med illustrationerne, 
+     fordi jeg i desktop vil have den til at stå over mit billede. Derfor laver jeg to forskellige diver, en til mobil og en til desktop, 
+     og beder den til desktop om at være display:none i mobil, og den til mobil om at være display:none i desktop -->
+
+    <div class="video-kropsterapi">
+      <div id="video" class="video">
+        <!-- autoplay; starter automatiks, playsinline gør at videoen ikke automatisk går i fuldskærm på iphone, men afspilles inde på hjemmesiden i stedet -->
+        <video src="img/stemningsvideo.mp4" autoplay muted loop playsinline></video>
       </div>
-      <button class="button1">Læs mere</button>
-      <button class="button2">Læs mere</button>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi molestias
-        minus eaque hic earum molestiae quas magni debitis temporibus, quod vel
-        et quasi praesentium illo ad assumenda impedit minima rem.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique sit a
-        dolor, voluptatibus enim fuga recusandae temporibus totam, nesciunt
-        placeat assumenda deleniti nemo quas molestias, fugiat officiis expedita
-        illo aliquid? Atque voluptatem eum fuga at sunt tenetur distinctio enim
-        ex hic assumenda rem dignissimos, ab et asperiores? A sunt possimus
-        repellat quo laborum quasi, harum earum quas tenetur similique id. Quas
-        amet consequatur fugit qui et alias illum quae. Vero eligendi iusto
-        consequuntur unde provident aspernatur in asperiores quaerat beatae
-        quasi eos necessitatibus quidem, hic laudantium eum alias. Commodi,
-        laboriosam! Quia modi eligendi et quas, mollitia libero consequatur
-        dolores ratione repellendus quaerat similique eaque laborum nulla ut
-        voluptatem facere totam odio. Sapiente, quos cupiditate. Maiores neque
-        numquam obcaecati eum asperiores. Animi natus, atque, ea corrupti eum
-        voluptate obcaecati dignissimos a quae, esse sunt ex? A unde alias ipsam
-        earum minus. Amet atque beatae voluptatem rem delectus doloribus
-        asperiores, quisquam numquam? Optio voluptatem delectus vero debitis
-        porro, at soluta reiciendis, facilis magni sapiente ullam accusantium
-        inventore, corrupti fuga quas! Odit cupiditate aliquid, veniam beatae
-        veritatis molestiae aperiam ullam magnam. Distinctio, voluptates! Vero
-        minus sint repudiandae dolorum accusamus sunt earum mollitia eveniet
-        animi asperiores, exercitationem at nostrum qui, aliquam deserunt iusto
-        corrupti esse et quasi. Consequatur, at quam eos itaque ab ipsa?
-        Delectus voluptates ad animi, pariatur id ipsam ipsa aperiam. Deserunt
-        optio, alias ea in ut molestias, natus suscipit libero maxime fuga,
-        nihil unde? Beatae suscipit, nemo sed deserunt ipsam rerum. Harum velit,
-        facere unde corporis consequatur quo quaerat dicta, distinctio deserunt
-        libero architecto placeat, a voluptatum minus modi eveniet omnis ipsa
-        nostrum consectetur in. Quasi numquam quaerat iste vitae amet. Labore
-        magni voluptates sed id eius libero minima alias delectus. Debitis
-        quibusdam modi fugit unde doloremque, deleniti ipsam exercitationem
-        dignissimos asperiores quisquam odit dolor aliquam explicabo dicta eos
-        fugiat voluptate?
-      </p> -->
+
+      <div class="kropsterapi-desktop">
+        <h1>Kropsterapi <span class="p_kropsterapi">er en helhedsorienteret behandlingsform, der forbinder krop og psyke
+            for at løsne fysiske
+            spændinger, mindske stress og skabe mental balance</span></h1>
+
+      </div>
+
+    </div>
+
+    <button class="booking-btn book-forside">Book</button>
+
+
+    <section class="kropsterapi">
+      <div class="kropsterapi-mobil">
+        <h1>Kropsterapi</h1>
+        <p>Kropsterapi er en helhedsorienteret behandlingsform, der forbinder krop og psyke for at løsne fysiske
+          spændinger, mindske stress og skabe mental balance</p>
+      </div>
+
+
+      <div class="grid1-2">
+        <div>
+          <img src="img/index/blomst.svg" alt="blomst">
+        </div>
+        <div>
+          <p>Hjælper kroppen ud af stresstilstand</p>
+        </div>
+      </div>
+
+      <div class="grid1-2">
+        <div>
+          <img src="img/index/blomst.svg" alt="blomst">
+        </div>
+        <div>
+          <p>Hjælper på angts, chok og traumer</p>
+        </div>
+      </div>
+
+      <div class="grid1-2">
+        <div>
+          <img src="img/index/blomst.svg" alt="blomst">
+        </div>
+        <div>
+          <p>Lindrer fysiske smerter</p>
+        </div>
+      </div>
+
+      <div class="grid1-2">
+        <div>
+          <img src="img/index/blomst.svg" alt="blomst">
+        </div>
+        <div>
+          <p>Skaber balance</p>
+        </div>
+      </div>
+
+
+    </section>
+
+    <section class="teaser">
+
+      <div>
+        <img src="img/index/portræt_mette.webp" alt="Mette Thaisen">
+      </div>
+
+      <div class="grid1-1-1">
+        <h2>Om mig</h2>
+        <p>Jeg mødte Manuvision på et tidspunkt hvor mit liv var ved at tage en drejning. Efter mange år i det der på
+          mange måder
+          lignede drømmejobbet, måtte jeg erkende, at jeg ikke havde hjertet med i mit arbejde. En voksende interesse
+          for kroppen, en nysgerrighed på samspillet mellem det fysiske og det mentale, fik mig i
+          retning af
+          Manuvision.</p>
+        <button class="button1">Læs mere</button>
+      </div>
+
+    </section>
+
+    <section class="citat">
+      <p>“Efter bare to behandlinger kunne jeg mærke en stor forskel, en ro og balance i kroppen som påvirkede mit sind
+        og mine
+        følelser positivt.”</p>
+      <p>Marie-Louise</p>
+    </section>
+
+    <section class="teaser">
+      <div>
+        <img src="img/index/behandlingsbillede.webp" alt="behandlingsbillede">
+      </div>
+
+      <div class="grid1-1-1">
+        <h2>Forløb</h2>
+        <p>En Manuvision-behandling hos mig starter altid med en kort samtale. Hvad bringer dig til min briks, hvad sker
+          der i
+          netop din krop? Hvilke udfordringer står du med i øjeblikket? Fysisk eller mentalt? Eller begge dele?. Jeg
+          hjælper dig via kropsterapien, guider dig i dit åndedræt og hjælper dig til at gå ind i de spændinger og
+          blokeringer
+          du møder undervejs i behandlingen.</p>
+        <button class="button2">Læs mere</button>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer">
+      <div class="footer-tekst">
+        <p>
+          <b>Frederikberg:</b> Bernhard Bangs Allé 25, 2. sal. 2000
+          Frederiksberg
+        </p>
+        <p><b>Helsingør:</b> De Mezas vej 15B, 3000 Helsingør</p>
+      </div>
+      <div class="certifikater">
+        <img src="img/certifikat/Manuvision_LOGO_Certificeret_1 grøn.webp" alt="certifikat" />
+        <img src="img/certifikat/Chok-traume.webp" alt="certifikat" />
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/burger.js"></script>
+  <script src="js/index.js"></script>
+</body>
+
+</html>
