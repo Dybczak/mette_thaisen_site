@@ -1,17 +1,187 @@
+h2 {
+  font-size: 1.5rem;
+}
+
+/* SECTION 1 */
+
 .min-historie-kasse {
   background-color: #c9d0a6;
-  padding-top: 50px;
-  margin-top: 70px;
+  margin-block: 40px;
   border-radius: var(--border-radius-box);
+  margin-inline: 30px;
+}
+
+.min-historie-kasse video {
+  width: 100%;
+  border-radius: var(--border-radius-box);
+  padding: 15px 15px 0px 15px;
 }
 
 .title {
   display: inline-block;
   background-color: var(--color-h1-h2-bg);
-  padding: 4px 100px 4px 40px;
+  padding: 10px 30px 10px 25px;
+  margin-top: 30px;
   border-radius: var(--border-radius-title-box);
 }
 
-.tekst {
-  padding: 30px 50px 60px 50px;
+.min-historie-kasse .tekst {
+  padding: 20px 25px 40px 25px;
+}
+
+/* SECTION 2 */
+
+.full-width1 {
+  background-color: var(--color-header);
+  padding: 40px 30px 40px 30px;
+}
+
+.full-width1 img {
+  border-radius: var(--border-radius-box);
+}
+
+.full-width1 .tekst {
+  padding-top: 20px;
+}
+
+/* SECTION 3 */
+
+.min-uddannelse-kasse {
+  background-color: #c9d0a6;
+  margin-block: 40px;
+  border-radius: var(--border-radius-box);
+  margin-inline: 30px;
+}
+
+.min-uddannelse-kasse .tekst {
+  padding: 20px 25px 32px 25px;
+}
+
+li {
+  font-family: var(--font-p-og-button);
+  font-size: var(--font-p-size);
+  letter-spacing: var(--font-letter-spacing);
+  line-height: 160%;
+  margin-bottom: 0.5rem;
+}
+
+ul {
+  padding-left: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+ul ul {
+  padding-left: 1.5rem;
+}
+
+/* SECTION 4 */
+
+.full-width2 {
+  background-color: var(--color-header);
+  padding: 40px 30px 40px 30px;
+}
+
+.full-width2 .title {
+  background-color: #f5ece5;
+  padding-left: 30px;
+  margin-top: 0px;
+}
+
+.full-width2 .indhold {
+  background-color: var(--color-box-bg);
+  border-radius: var(--border-radius-box);
+  padding: 15px 15px 40px 15px;
+  margin-top: 20px;
+}
+
+.full-width2 .indhold p {
+  padding: 20px 10px 0 10px;
+}
+
+/********************* DESKTOP *********************/
+
+@media (min-width: 850px) {
+  h2 {
+    font-size: 2rem;
+  }
+
+  /******************** SECTION 1 ********************/
+
+  .min-historie-kasse {
+    background-color: var(--color-bg);
+    margin-inline: 200px;
+    display: grid;
+    grid-template-columns: 2fr 1fr 0.5fr;
+    grid-template-rows: 5fr 2fr 1fr;
+    grid-column: 1/-1;
+  }
+
+  .min-historie-kasse .indhold {
+    background-color: var(--color-box-bg);
+    grid-column: 1/-1;
+    grid-row: 1/3;
+  }
+
+  .min-historie-kasse .video {
+    grid-column: 2/3;
+    grid-row: 2/4;
+  }
+
+  .title {
+    padding: 10px 90px 10px 50px;
+    margin-top: 50px;
+  }
+
+  .min-historie-kasse .tekst {
+    padding: 30px 50px 60px 50px;
+  }
+
+  .min-historie-kasse .tekst :last-child {
+    padding-top: 20px;
+  }
+
+  /******************** SECTION 2 ********************/
+
+  .full-width1 {
+    display: flex;
+    padding-inline: 200px;
+  }
+
+  .full-width1 .tekst {
+    padding: 0 0 0 50px;
+    align-self: center;
+  }
+
+  .full-width1 img {
+    height: 350px;
+    width: auto;
+  }
+
+  /******************** SECTION 3 ********************/
+
+  .min-uddannelse-kasse {
+    margin-inline: 200px;
+  }
+
+  .min-uddannelse-kasse .tekst {
+    display: flex;
+  }
+
+  ul {
+    margin-top: 0;
+  }
+
+  /******************** SECTION 4 ********************/
+
+  .full-width2 {
+    padding-inline: 200px;
+  }
+
+  .full-width2 .indhold {
+    display: flex;
+  }
+
+  .full-width2 img {
+    width: 300px;
+  }
 }
