@@ -234,6 +234,9 @@ nav {
   font-size: 1.2rem;
   text-decoration: none;
   color: black;
+      font-family: var(--font-p-og-button);
+    letter-spacing: var(--font-letter-spacing);
+    line-height: 160%;
 }
 
 .menu a:hover {
