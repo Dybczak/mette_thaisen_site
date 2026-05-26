@@ -76,7 +76,7 @@
   }
   .iconer {
     margin-bottom: 4rem;
-    margin-top: 1rem;
+    margin-top: 4rem;
   }
 }
 
@@ -115,6 +115,7 @@ Tekst er inde i den mørke box***/
   padding-right: 30px;
   padding-block: 15px;
   margin-top: 30px;
+  padding-left:20px
 }
 
 .certifikat {
