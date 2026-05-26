@@ -232,6 +232,9 @@ nav {
 /* Fjerner tekst-styling på linkene */
 .menu a {
   font-size: 1.2rem;
+  font-family: var(--font-p-og-button);
+  letter-spacing: var(--font-letter-spacing);
+  line-height: 160%;
   text-decoration: none;
   color: black;
 }
@@ -244,9 +247,6 @@ nav {
   display: flex;
   align-items: center;
   margin-bottom: 0;
-  font-family: var(--font-p-og-button);
-  letter-spacing: var(--font-letter-spacing);
-  line-height: 160%;
 }
 
 /* Vi sætter 'booking:hover' funktionen her, så den overrider 'menu a:hover' */
