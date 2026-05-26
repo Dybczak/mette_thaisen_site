@@ -61,6 +61,7 @@
   align-items: center;
   flex-direction: column;
   margin-block: 4rem;
+
 }
 .iconer img {
   width: 150px;
@@ -115,7 +116,7 @@ Tekst er inde i den mørke box***/
   padding-right: 30px;
   padding-block: 15px;
   margin-top: 30px;
-  padding-left:20px
+  padding-left:25px
 }
 
 .certifikat {
@@ -141,6 +142,7 @@ Tekst er inde i den mørke box***/
     gap: 20px;
   }
 
+  .banner_3 h2{padding-left:50px;}
   .certifikat {
     width: 40%;
     display: flex;
@@ -215,6 +217,7 @@ Tekst er inde i den mørke box***/
   padding-right: 30px;
   padding-block: 15px;
   max-width: 65ch;
+  padding-left:25px;
 }
 .cirkel_box4 {
   display: grid;
@@ -445,6 +448,7 @@ Tekst er inde i den mørke box***/
   }
   .banner_4 {
     margin-bottom: 4rem;
+      padding-left:25px;
   }
 }
 
