@@ -25,8 +25,9 @@ html::before {
   /* siger hvor den skal være, den er per default i center men vi vil gerne have at den starter ude til venstre */
   transform-origin: 0 0;
 
-  /* for at være sikker på baren altid er yderst skriver man tyspisk et z-indeks på 1000, det er sjældent man skriver det så højt men på 1000 er den helt fremme - ellers vil man normalt give spring af 10 */
-  z-index: 1000;
+  /* for at være sikker på baren altid er yderst skriver man tyspisk et z-indeks på 1000, det er sjældent man skriver det så højt men på 1000 er den helt fremme - ellers vil man normalt give spring af 10.
+  Fordi vi har sat vores header til at have et z-indeks på 1000 laver jeg et z-indeks på 1001 på progress baren (den skal jo ligge forrest for at man kan se den) */
+  z-index: 1001;
 }
 
 /* nu skal vi lave keyframes til den, og vi kalder den "site-progress"  */
@@ -83,7 +84,7 @@ html::before {
 .book-forside {
   display: flex;
   justify-self: center;
-  margin-block: 40px;
+  margin-block: 80px;
 }
 
 /****************************** Kropsterapi kasse ********************************/
@@ -100,39 +101,41 @@ html::before {
 }
 
 .kropsterapi {
-  background-color: var(--color-box-bg);
-  padding-block: 10px 20px;
+  /* padding-bottom: 20px; */
   border-radius: var(--border-radius-box);
+  margin-bottom: 40px;
 }
 
 .kropsterapi-mobil h1 {
   padding: 8px 16px 8px 16px;
-  background-color: var(--color-h1-h2-bg);
+  background-color: #acc9cc;
   width: 100%;
 }
 
 /* for at undgå at give en class (giver bedre overblik i min css) går jeg ind i den første div ved at sige div:first-of-type og ind i det første p ved at sige p:first-of-type */
 .kropsterapi-mobil p {
-  padding: 8px 16px 8px 16px;
-  background-color: var(--color-banner-bg);
-  color: var(--color-bg);
+  padding: 0px 16px 8px 16px;
+  background-color: #acc9cc;
   width: 100%;
+  margin-bottom: 80px;
 }
 
 /* gør blomst-svg mindre */
 .grid1-2 img {
   width: 100px;
   justify-self: center;
+  align-self: top;
 }
 
 /* sætter blomst og tekst ved siden af hinanden */
 .grid1-2 {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  gap: 40px;
+  gap: 20px;
   align-items: center;
   justify-content: center;
   padding: 40px 10px 40px 10px;
+  background-color: #a3aa82;
 }
 
 /******************************* Om mig kasse ********************************/
@@ -140,15 +143,22 @@ html::before {
 /* laver baggrundsfarve */
 .teaser {
   background-color: var(--color-box-bg);
-  margin-block: 80px;
-  padding-block: 20px;
+  margin-block: 100px;
+  padding-bottom: 20px;
   margin-inline: 30px;
   border-radius: var(--border-radius-box);
 }
 
+.forloeb {
+  background-color: var(--color-box-bg);
+  margin-bottom: 150px;
+}
+
 .teaser img {
-  padding-top: 10px;
   display: block;
+  border-bottom: 0.5px solid rgb(37, 37, 37);
+  border-top-left-radius: var(--border-radius-box);
+  border-top-right-radius: var(--border-radius-box);
 }
 
 /* tager fat i det p der ligger i den anden div (giver mig bedre overblik frem for en masse forskellige class´es) */
@@ -177,8 +187,8 @@ html::before {
 
 /* giver elementet baggrundsfarve, og tekst farve. Sætter igen margin-inline: -100px på for at få div´en hele ud til kanterne. */
 .citat {
-  background-color: var(--color-banner-bg);
-  color: var(--color-bg);
+  background-color: #83a2a4;
+  color: white;
   padding: 20px;
 }
 
@@ -220,15 +230,14 @@ html::before {
   /* laver kropsterapi-desktop synlig */
   .kropsterapi-desktop {
     display: block;
-    border-radius: var(--border-radius-title-box);
   }
 
   /* grid på den div der er om videoen og teksten, for at kunne bede videoen om at fylde det hele og teksten om at ligge i en kolonne ovenpå
   Jeg sætter den rod som teksten ligger i som auto, for at rækken automatisk tilpasser sig teksten (når skærmen gøres mindre og bredere) og baggrundsfarven derved følger teksten */
   .video-kropsterapi {
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: 2fr auto 1fr;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 4fr auto 1fr;
   }
 
   /* beder videoen om at fylde det hele. */
@@ -243,13 +252,22 @@ html::before {
   .kropsterapi-desktop {
     grid-column: 1;
     grid-row: 2;
-    background-color: var(--color-box-bg);
+    background-color: #acc9cc;
+    border-radius: var(--border-radius-title-box);
   }
+
+  /* .kropsterapi {
+    background-color:;
+  } */
 
   .kropsterapi-desktop h1,
   p {
     padding-inline: 30px;
-    padding-top: 10px;
+    padding-block: 10px;
+  }
+
+  .grid1-2 p {
+    padding-inline: 0;
   }
 
   /********************************* illustrationer og tekst **********************/
@@ -258,8 +276,8 @@ html::before {
   Så jeg sætter grid på i stedet, for at kunne styre hvor meget de hver især fylder */
   .kropsterapi {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    margin-block: 80px;
+    grid-template-columns: 1fr 1fr;
+    margin-block: 100px;
     padding-inline: 60px;
     justify-content: center;
     align-items: center;
@@ -284,6 +302,7 @@ html::before {
     height: 600px;
     object-fit: cover;
     object-position: top;
+    border-right: 1px solid rgb(37, 37, 37);
   }
 
   /* sætter et grid på teasers, for at undgå at skulle lave en masse padding og margin, så det er nemmere at styre uden at det hele rykker til hinanden */
