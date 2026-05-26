@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/booking.css" />
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Angkor&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Alike&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&display=swap" rel="stylesheet" />
+
+
+    <title>Booking</title>
+</head>
+
+<header>
+    <a href="index.html"><img src="img/logo.svg" alt="logo" /></a>
+    <nav>
+        <ul class="menu">
+            <li><a href="om_mig.html">Om mig</a></li>
+            <li><a id="aktiv" href="forloeb.html">Forløb</a></li>
+            <li><a href="kommer_snart.html">Praktisk information</a></li>
+            <li class="booking-btn"><a href="booking.html">Book</a></li>
+        </ul>
+        <button class="burger" aria-label="menu">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </button>
+    </nav>
+</header>
+
+<body>
+    <main>
+        <div class="booking">
+
+            <div class="venstre_box">
+
+                <h1>Aftaleinformation</h1>
+
+                <div class="step active" id="step1">
+                    <div class="circle"></div>
+                    <span>Kalender</span>
+                </div>
+
+                <div class="step" id="step2">
+                    <div class="circle"></div>
+                    <span>Ydelse</span>
+                </div>
+
+                <div class="step" id="step3">
+                    <div class="circle"></div>
+                    <span>Dato og tid</span>
+                </div>
+
+                <div class="step" id="step4">
+                    <div class="circle"></div>
+                    <span>Dine informationer</span>
+                </div>
+
+                <div class="step" id="step5">
+                    <div class="circle"></div>
+                    <span>Bekræftelse</span>
+                </div>
+
+            </div>
+
+
+
+            <div class="højre_box">
+
+
+
+                <div class="section active" id="section1">
+
+                    <h2>Vælg en kalender</h2>
+
+                    <div class="card" onclick="goToStep(2)">
+                        <h3>Manuvision Helsingør</h3>
+                        <p>De Mezas Vej 15B</p>
+                    </div>
+
+                    <div class="card" onclick="goToStep(2)">
+                        <h3>Manuvision Frederiksberg</h3>
+                        <p>Bernhard Bangs Alle 25</p>
+                    </div>
+
+                </div>
+
+
+
+                <div class="section" id="section2">
+
+                    <h2>Vælg ydelse</h2>
+
+                    <div class="card" onclick="goToStep(3)">
+                        <h3>Manuvision behandling, incl. samtale
+                            1 time og 10 minutter </h3>
+                        <p>DKK 1.150,00</p>
+                        <button class="Læs_mere_btn">Læs mere om behandlingen</button>
+                    </div>
+
+                    <div class="card" onclick="goToStep(3)">
+                        <h3>Manuvision behandling incl. samtale; stud./ledig/pensionist
+                            1 time og 10 minutter </h3>
+                        <p> DKK 1.000,00</p>
+                        <button class="Læs_mere_btn">Læs mere om behandlingen</button>
+                    </div>
+
+                    <div class="card" onclick="goToStep(3)">
+                        <h3>Slip fri af stress, incl. bogen til selvhjælp 'lær at lytte til kroppen'
+                            1 time og 20 minutter </h3>
+                        <p> DKK 1.400,00</p>
+                        <button class="Læs_mere_btn">Læs mere om behandlingen</button>
+                    </div>
+
+
+                    <div class="card" onclick="goToStep(3)">
+                        <h3>Manuvision behandlingsforløb, samtale & behandling, til dig som er i forløb
+                            1 time og 5 minutter </h3>
+                        <button class="Læs_mere_btn">Læs mere om behandlingen</button>
+
+                    </div>
+
+                    <div class="card" onclick="goToStep(3)">
+                        <h3>Manuvision behandlingsforløb (henvisning via sundhedsforsikring) </h3>
+
+                        <button class="Læs_mere_btn">Læs mere om behandlingen</button>
+                    </div>
+
+                    <div class="card" onclick="goToStep(5)">
+                        <h3>Gratis afklarende samtale pr. telefon</h3>
+                        <button class="Læs_mere_btn">Læs mere om behandlingen</button>
+
+                    </div>
+
+                    <div class="navigation">
+                        <button onclick="goToStep(1)">
+                            ← Tilbage
+                        </button>
+                    </div>
+
+                </div>
+
+
+
+                <div class="section" id="section3">
+
+                    <h2>Vælg dato og tid</h2>
+
+                    <div class="card" onclick="goToStep(4)">
+                        <h3>Mandag 12 Maj</h3>
+                        <p>10:00</p>
+                    </div>
+
+                    <div class="card" onclick="goToStep(4)">
+                        <h3>Mandag 12 Maj</h3>
+                        <p>13:00</p>
+                    </div>
+
+                    <div class="card" onclick="goToStep(4)">
+                        <h3>Tirsdag 13 Maj</h3>
+                        <p>09:00</p>
+                    </div>
+
+                    <div class="navigation">
+
+                        <button onclick="goToStep(2)">
+                            ← Tilbage
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="section" id="section4">
+
+                    <h2>Dine informationer</h2>
+
+                    <form onsubmit="submitBooking(event)">
+
+                        <input type="text" placeholder="Fulde navn" required>
+
+                        <input type="email" placeholder="Email" required>
+
+                        <input type="tel" placeholder="Telefonnummer" required>
+
+                        <div class="navigation">
+
+                            <button type="button" onclick="goToStep(3)">
+                                ← Tilbage
+                            </button>
+
+                            <button type="submit">
+                                Bekræft booking
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+
+
+                <div class="section" id="section5">
+
+                    <h2>Din booking er nu reserveret</h2>
+
+
+
+                    <div class="navigation">
+
+                        <button onclick="goToStep(1)">
+                            Start forfra
+                        </button>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="OBS">
+            <h2>OBS</h2>
+            <p>Vil du flytte eller aflyse en tid gøres dette via login eller personlig henvendelse. Ved aflysning, skal
+                dette gøres 24
+                timer før aftalte tid, ved afbud herefter faktureres den fulde pris for behandlingen.
+
+                Tlf: 51498012
+
+                e-mail: mettethaisen@gmail.com
+            </p>
+        </div>
+
+
+
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="footer-tekst">
+                <p>
+                    <b>Frederikberg:</b> Bernhard Bangs Allé 25, 2. sal. 2000
+                    Frederiksberg
+                </p>
+                <p><b>Helsingør:</b> De Mezas vej 15B, 3000 Helsingør</p>
+            </div>
+            <div class="certifikater">
+                <img src="img/certifikat/Manuvision_LOGO_Certificeret_1 grøn.webp" alt="certifikat" />
+                <img src="img/certifikat/Chok-traume.webp" alt="certifikat" />
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/burger.js"></script>
+    <script src="js/booking.js"></script>
+
+</body>
+
+</html>
+</body>
