@@ -185,7 +185,7 @@ p {
   box-shadow: var(--box-shadow);
   border: solid 0.5px #e3b787;
 
-  margin-block: var(--margin-btn-block);
+  /* margin-block: var(--margin-btn-block); */
   padding: 10px 30px;
 }
 
@@ -243,6 +243,7 @@ nav {
 .menu li {
   display: flex;
   align-items: center;
+  margin-bottom: 0;
 }
 
 /* Vi sætter 'booking:hover' funktionen her, så den overrider 'menu a:hover' */
@@ -324,7 +325,7 @@ nav {
 
   /* BOOKING BTN */
   .booking-btn {
-    width: 105px;
+    width: 110px;
   }
 }
 /*************** FOOTER ***************/
