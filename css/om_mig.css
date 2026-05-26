@@ -1,3 +1,43 @@
+/*************** blå progress bar i toppen af siden ***********/
+
+/* before betyder inde i html men før alt andet indhold */
+/* content skal man skrive for at putte noget ind, men vi skriver ikke noget derinde fordi vi ikke skal have indhold ind, men derimod bare en bar. Så vi siger at der skal noget ind og bagefter definerer hvad det er der skal ind */
+/*  så indsætter vi noget, egentlig bare et eller andet og giver det en background color*/
+html::before {
+  content: "";
+  inset: 0;
+  background-color: #164b7a;
+
+  /* block size det er højden, (en anden måde at skrive højde på) som sørger for at den opfører sig som en lille kasse */
+  block-size: 4px;
+
+  /* i animationen skriver vi "both" på fill-mode gør at animationen bliver i stillingen, så den ikke "hopper" tilbage til startpunkt. Det er "both" der gør at den røde linje vil være helt fyldt ud når man er nede i bunden af siden, og forbliver der --> visuel indikator for hvad der er sket (altså at vi er nået bunden af siden) */
+  animation: site-progress linear both;
+
+  /* den skal ikke være på tid, men derimod styret af scroll */
+  animation-timeline: scroll();
+
+  /* det er vigtigt at skrive position: fixed fordi det betyder at det er oppe i toppen og den bliver i toppen */
+  position: fixed;
+
+  /* siger hvor den skal være, den er per default i center men vi vil gerne have at den starter ude til venstre */
+  transform-origin: 0 0;
+
+  /* for at være sikker på baren altid er yderst skriver man tyspisk et z-indeks på 1000, det er sjældent man skriver det så højt men på 1000 er den helt fremme - ellers vil man normalt give spring af 10.
+  Fordi vi har sat vores header til at have et z-indeks på 1000 laver jeg et z-indeks på 1001 på progress baren (den skal jo ligge forrest for at man kan se den) */
+  z-index: 1001;
+}
+
+/* nu skal vi lave keyframes til den, og vi kalder den "site-progress"  */
+/* vi siger den skal starte (scale starter per default i midten af siden, men ved at sige 0 i højden og en i siderne så er det kun siderne der vokser */
+/* vi skriver kun from (og ikke også to), fordi baren som udgangspunkt er fyldt helt ud */
+@keyframes site-progress {
+  from {
+    scale: 0 1;
+  }
+}
+
+
 h2 {
   font-size: 1.5rem;
 }
