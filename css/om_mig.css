@@ -178,11 +178,6 @@ ul ul {
   }
 
   .min-historie-kasse .video iframe {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    border: none;
-    border-radius: var(--border-radius-box);
-    display: block;
     position: relative;
 }
 
