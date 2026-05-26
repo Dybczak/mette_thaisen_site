@@ -51,7 +51,7 @@ h2 {
   margin-inline: 30px;
 }
 
-.min-historie-kasse video {
+.min-historie-kasse iframe {
   width: 100%;
   border-radius: var(--border-radius-box);
   padding: 15px 15px 0px 15px;
