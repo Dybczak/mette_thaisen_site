@@ -201,4 +201,8 @@ ul ul {
   .full-width2 .tekst {
     padding: 30px 50px 60px 50px;
   }
+
+  .full-width2 .title {
+  padding-left: 50px
+}
 }
