@@ -172,6 +172,14 @@ ul ul {
     margin-top: 16px;
   }
 
+  .min-historie-kasse .video iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: none;
+    border-radius: var(--border-radius-box);
+    display: block;
+}
+
   .title {
     padding: 10px 90px 10px 50px;
     margin-top: 50px;
