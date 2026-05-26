@@ -51,10 +51,15 @@ h2 {
   margin-inline: 30px;
 }
 
-.min-historie-kasse video {
-  width: 100%;
-  border-radius: var(--border-radius-box);
+.video {
   padding: 15px 15px 0px 15px;
+}
+
+.video iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  border-radius: var(--border-radius-box);
 }
 
 .title {
@@ -178,6 +183,7 @@ ul ul {
     border: none;
     border-radius: var(--border-radius-box);
     display: block;
+    position: relative;
 }
 
   .title {
