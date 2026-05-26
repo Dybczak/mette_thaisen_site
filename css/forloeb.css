@@ -1,16 +1,21 @@
 /*****BOX1*****/
 .box1 {
   background-color: var(--color-bg);
-  margin-bottom: 3rem;
 }
 .h1-forløb {
   margin-top: 2rem;
   margin-left: 2rem;
 }
-
+.grid_1-1 {
+  padding-top: 4rem;
+  margin-inline: 5rem;
+}
 .beskrivelse {
   margin-top: 1rem;
-  padding: 3rem;
+  padding: 0rem;
+  margin-inline: 5px;
+  margin-bottom: 2rem;
+  max-width: 65ch;
 }
 .værdiord {
   color: var(--color-h1-h2);
@@ -18,60 +23,63 @@
 }
 .værdiord_btn {
   text-align: center;
-  margin-top: 20px;
+  padding-bottom: 4rem;
+  padding-top: 3rem;
 }
 
 .behandling-billede {
   width: 100%;
+  border: var(--color-header) 6px solid;
 }
 
 @media (min-width: 768px) {
   .grid_1-1 {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    align-items: start; /* Juster indholdet i toppen af hver kolonne */
+    gap: 1rem;
+    padding-right: 2rem;
   }
   .behandling-billede {
-    width: 100%;
-    height: auto;
-    position: relative;
+    width: auto;
+    height: 400px;
+    position: relative; /* Gør det muligt at placere værdiord_btn over billedet */
     padding-top: 0;
+    margin-top: 3rem;
+    margin-left: 4rem;
   }
 }
-/*****BOX2*****/
-.box2 p {
-  background-color: var(--color-header);
-  text-align: center;
-  margin-bottom: 2rem;
-}
 
-.overskrift_box2 {
-  text-align: center;
-  padding-top: 3rem;
-}
-
+/***BOX2 iconer***/
 .iconer {
+  display: flex;
+  justify-content: center;
   align-items: center;
-  margin: 3rem 0 3rem 0;
-  width: 50%;
+  text-align: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  flex-direction: column;
+  margin-block: 4rem;
+}
+.iconer img {
+  width: 150px;
+  height: auto;
 }
 @media (min-width: 768px) {
   .grid_1-1-1-1 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 2rem;
-    padding: 2rem;
-    background-color: var(--color-header);
+    margin: 0;
+    padding: 0;
+    gap: 2px;
   }
-  .tekst_box2 {
-    text-align: center;
-    margin-bottom: 2rem;
-  }
-  .overskrift_box2 {
-    text-align: center;
-    padding-top: 3rem;
-    background-color: var(--color-header);
+  .iconer {
+    margin-bottom: 4rem;
+    margin-top: 1rem;
   }
 }
+
 /********BOX3*****/
 /***
 .box3 styrer hele baggrunden
@@ -81,82 +89,148 @@ Tekst er inde i den mørke box***/
 
 .box3 {
   background-color: var(--color-box-bg);
-  position: relative; /* Gør det muligt at placere banneret inden for denne boks */
-  width: 100%; /* Gør boksen fuld bredde */
-  min-height: 500px; /* Giv boksen en minimumshøjde for at sikre, at den har nok plads til indholdet */
-  padding: 30px; /* Tilføjer indvendig margin for at give plads til indholdet */
-}
-
-.innerbox3 {
-  display: flex; /* Brug flexbox til at arrangere indholdet */
-  flex-direction: column; /* Arranger indholdet i en kolonne */
-  align-items: flex-end; /* Juster indholdet til venstre */
-  border-radius: 10px;
-  background-color: var(--color-bg);
+  width: 100%;
   padding: 3rem;
-  margin-top: 1rem;
-  .special_h3 {
-    color: var(--color-h1-h2);
-    margin-top: 1rem;
-  }
 }
 
-.banner_3 {
+.innerbox3,
+.innerbox3_2 {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-bg);
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+.special_h3 {
+  color: var(--color-h1-h2);
+  padding-inline: 2rem;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+.banner_3 h2 {
+  display: inline block;
   background-color: var(--color-header);
-  padding: 10px;
-  border-radius: var(--border-radius-box);
-  display: flex; /* Brug flexbox til at arrangere indholdet */
-  justify-content: flex-start; /* Juster teksten til venstre */
+  width: fit-content;
+  border-radius: var(--border-radius-title-box);
+  padding-right: 30px;
+  padding-block: 15px;
+  margin-top: 30px;
 }
 
 .certifikat {
-  width: 50%;
+  width: 30%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: end;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: auto;
 }
 
 .tekst_box3 {
-  margin-bottom: 1rem;
+  padding-inline: 30px;
+  margin-bottom: 20px;
+  max-width: 65ch;
+}
+
+@media (min-width: 768px) {
+  .box3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: var(--color-box-bg);
+    gap: 20px;
+  }
+
+  .certifikat {
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+    padding-inline: 2rem;
+    padding-bottom: 2rem;
+    margin-left: auto;
+  }
+
+  .innerbox3,
+  .innerbox3_2 {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-bg);
+    border-radius: 10px;
+  }
+  .tekst_box3 {
+    padding-inline: 30px;
+    margin-bottom: 20px;
+  }
 }
 
 /********BOX4*****/
 .box4 {
-  background-color: var(--color-bg);
+  background-color: var(--color-header);
+  border: 4px solid var(--color-header);
   position: relative; /* Gør det muligt at placere banneret inden for denne boks */
   width: 100%; /* Gør boksen fuld bredde */
-  min-height: 500px; /* Giv boksen en minimumshøjde for at sikre, at den har nok plads til indholdet */
-  padding: 30px; /* Tilføjer indvendig margin for at give plads til indholdet */
+  padding: 3rem; /* Tilføjer indvendig margin for at give plads til indholdet */
+}
+.btn_box4 {
+  justify-content: center;
+  font-family: var(--font-p-og-button);
+  font-size: 1rem;
+  letter-spacing: var(--font-letter-spacing);
+  color: var(--color-btn1-font);
+  background-color: var(--color-btn1-bg);
+  border-radius: var(--border-radius-btn);
+  box-shadow: var(--box-shadow);
+  border: none;
+  padding: var(--padding-btn);
+  margin: auto;
+  margin-block: 5rem;
+  display: block;
 }
 
+.btn_box4:hover {
+  background-color: var(--color-btn1-bg-hover);
+}
 .innerbox4 {
-  display: flex; /* Brug flexbox til at arrangere indholdet */
-  flex-direction: column; /* Arranger indholdet i en kolonne */
-  align-items: flex-start; /* Juster indholdet til venstre */
+  width: 100%; /* Gør boksen fuld bredde */
   border-radius: 10px;
-  background-color: var(--color-header);
-  max-width: 800px; /* Begrænser bredden på indholdet for bedre læsbarhed */
-  padding: 3rem;
+  padding-top: 2rem;
+  background-color: var(--color-bg);
+}
+.grid_1-1_box4 {
+  padding-inline: 30px;
+  margin-block: 3rem 2rem;
+}
+
+.speciel_teks_box4 {
+  color: var(--color-footer);
+  font-style: italic;
 }
 
 .banner_4 {
-  margin-top: 1rem;
-  background-color: var(--color-bg);
-  padding: 10px;
-  border-radius: var(--border-radius-box);
-  display: flex; /* Brug flexbox til at arrangere indholdet */
-  justify-content: flex-start; /* Juster teksten til venstre */
+  display: flex;
+  margin-right: auto;
+  background-color: var(--color-header);
+  width: fit-content;
+  border-radius: 6px 5px;
+  padding-right: 30px;
+  padding-block: 15px;
+  max-width: 65ch;
 }
 .cirkel_box4 {
-  padding: 120px;
-  gap: 20px;
+  display: grid;
+  justify-items: center;
+  gap: 3rem;
+  margin-block: 2rem;
 }
-.cirkel {
-  gap: 30px; /* Tilføj mellemrum mellem cirklerne */
-  width: 130px; /* Gør cirklen kvadratisk */
-  height: 130px; /* Gør cirklen kvadratisk */
+
+.cirkel1,
+.cirkel2,
+.cirkel3,
+.cirkel4 {
+  width: 200px; /* Gør cirklen kvadratisk */
+  height: 200px; /* Gør cirklen kvadratisk */
   background-color: var(--color-banner-bg);
   border-radius: 50%; /* Gør elementet til en cirkel */
-  display: flex; /* Brug flexbox til at arrangere indholdet */
+  display: grid; /* Brug flexbox til at arrangere indholdet */
   justify-content: center; /* lodret */
   align-items: center; /* vandret */
   text-align: center;
@@ -164,60 +238,394 @@ Tekst er inde i den mørke box***/
   font-size: var(--font-p-size);
 }
 
-.btn_box4 {
-  text-align: center;
+.cirkel4 {
+  margin-bottom: 5rem;
+}
+
+/***popover****/
+.overlay {
+  position: fixed; /*ligger fast oven på hele skærmen*/
+  inset: 0; /*dækker hele skærmen (top, bund, venstre, højre = 0)*/
+  background-color: var(--color-header);
+
+  opacity: 0; /*usynlig som standard*/
+  pointer-events: none; /*man kan klikke igennem den når den er skjult*/
+  transition: 0.25s ease; /*gør fade smooth*/
+}
+
+.overlay.active {
+  opacity: 1; /*overlay bliver synlig*/
+  pointer-events: auto; /*man kan klikke på den (fx for at lukke popup)*/
+}
+
+[popover] {
+  position: fixed; /*popup ligger fast på skærmen*/
+  top: 50%; /*placerer den i midten*/
+  left: 50%; /*placerer den i midten*/
+  transform: translate(-50%, -50%) scale(0.5); /*centrerer den præcist, starter lidt mindre (til animation)*/
+
+  opacity: 0; /*skjult som standard*/
+  transition: 0.25s ease; /*smootj trans*/
+  width: min(500px, 90vw); /*max 500px, men responsiv på mobil*/
+  padding: 20px;
+  background: var(--color-header);
+  border-radius: 16px;
+  border: 6px solid var(--color-bg);
+}
+
+[popover]:popover-open {
+  opacity: 1; /*gør synlig*/
+  transform: translate(-50%, -50%) scale(1); /*vokser til normal størrelse & gir fade/zoom*/
+}
+
+/****CTA****/
+
+.open-btn {
+  background: var(--color-bg);
+  color: var(--color-footer);
+  font-size: 1rem;
+  padding-block: 5px;
+  padding-inline: 15px;
+  margin-inline: 0.5px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s ease;
+  border: solid 2px var(--color-footer);
+  margin-block: 1rem;
+  text-decoration: underline;
+}
+
+.open-btnn {
+  background: var(--color-bg);
+  color: var(--color-footer);
+  font-size: 1rem;
+  padding-block: 5px;
+  padding-inline: 10px;
+  margin-inline: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s ease;
+  border: solid 2px var(--color-footer);
+  margin-bottom: 0.5rem;
+  text-decoration: underline;
+}
+.close-btn {
+  margin-top: 15px;
+  background: var(--color-btn2-bg);
+  border: 1px solid var(--color-btn2-bg);
+  color: var(--color-btn2-font);
+  padding-inline: 2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+/* hover effekt */
+
+.open-btn:hover {
+  background: var(--color-header);
+  color: black;
+}
+.close-btn:hover {
+  background: var(--color-btn2-bg-hover);
+  color: var(--color-btn2-font);
+}
+.open-btnn:hover {
+  background: var(--color-header);
+  color: black;
+}
+.close-btnn:hover {
+  background: var(--color-btn2-bg-hover);
+  color: var(--color-btn2-font);
+}
+@media (min-width: 768px) {
+  .open-btn {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .open-btnn {
+    font-size: 1.5rem;
+  }
+
+  .cirkel_box4 {
+    display: grid;
+
+    grid-template-rows: 1fr 1fr;
+    height: auto;
+    margin-bottom: 2rem;
+    grid-template-columns: repeat(4, 280px);
+    justify-content: center; /* samler hele gridet på midten */
+    gap: 1rem; /* afstand mellem cirkler */
+  }
+
+  .billede_box4 {
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    width: 82vw;
+    height: auto;
+  }
+  .cirkel1 {
+    width: 250px; /* Gør cirklen kvadratisk */
+    height: 250px; /* Gør cirklen kvadratisk */
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: center; /*justify er vandret*/ /* self enkel elementer*/
+    align-self: flex-end; /*align er lodret*/
+  }
+  .cirkel2 {
+    width: 250px; /* Gør cirklen kvadratisk */
+    height: 250px; /* Gør cirklen kvadratisk */
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: center; /*justify er vandret*/
+    align-self: center; /*align er lodret*/
+  }
+
+  .cirkel3 {
+    width: 250px; /* Gør cirklen kvadratisk */
+    height: 250px; /* Gør cirklen kvadratisk */
+    grid-column: 3;
+    grid-row: 1;
+    justify-self: center; /*justify er vandret*/
+    align-self: flex-end; /*align er lodret*/
+    margin-top: 1rem;
+  }
+
+  .cirkel4 {
+    width: 250px; /* Gør cirklen kvadratisk */
+    height: 250px; /* Gør cirklen kvadratisk */
+    grid-column: 4;
+    grid-row: 2;
+    justify-self: center; /*justify er vandret*/
+    align-self: center; /*align er lodret*/
+  }
+
+  [popover] {
+    background: var(--color-bg);
+    border-radius: 16px;
+    border: 6px solid var(--color-header);
+  }
+
+  .btn_box4 {
+    justify-content: center;
+    font-family: var(--font-p-og-button);
+    font-size: 2rem;
+    letter-spacing: var(--font-letter-spacing);
+    color: var(--color-btn1-font);
+    background-color: var(--color-btn1-bg);
+    border-radius: var(--border-radius-btn);
+    box-shadow: var(--box-shadow);
+    border: none;
+    padding: 1.1rem;
+    margin: auto;
+    margin-block: 2rem;
+    display: block;
+  }
+
+  .btn_box4:hover {
+    background-color: var(--color-btn1-bg-hover);
+  }
+
+  .grid_1-1_box4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    margin-left: 4rem;
+  }
+
+  .tekst_box4 {
+    text-align: left;
+    padding-right: 8rem;
+    line-height: 2rem;
+  }
+  .innerbox4 {
+    padding-bottom: 2rem;
+  }
+  .banner_4 {
+    margin-bottom: 4rem;
+  }
 }
 
 /*****box5*****/
 .box5 {
-  background-color: var(--color-box-bg);
+  background-color: rgb(154, 170, 150);
   display: grid;
   grid-template-columns: 1fr 9fr 1fr; /* Tre kolonner: en smal, en bred, og en smal */
   align-items: center; /* Juster alle elementer i midten */
-  padding: 10px;
+  padding: 60px;
+}
+
+.Situationstegn-venstre {
+  color: rgb(120, 131, 117);
+  font-size: 4rem;
+  font-style: arial;
+  font-weight: bold;
+  align-self: start; /* Placerer det øverst i grid */
+  line-height: 2.6rem;
+}
+
+.Situationstegn-højre {
+  color: rgb(120, 131, 117);
+  font-size: 4rem;
+  font-style: arial;
+  font-weight: bold;
+  align-self: end; /* Placerer det nederst i grid */
+  line-height: 0.4rem;
+}
+.tekst_box5 {
+  grid-template-columns: 2fr 10fr 2fr; /* Juster kolonnebredden for større skærme */
+  font-style: italic;
+}
+
+.citat_box5 {
+  font-style: italic;
+}
+
+@media (min-width: 768px) {
   .Situationstegn-venstre {
-    color: var(--color-banner-bg);
-    font-size: 3rem;
+    margin-left: auto;
+    font-style: arial;
     font-weight: bold;
     align-self: start; /* Placerer det øverst i grid */
   }
+
   .Situationstegn-højre {
-    color: var(--color-banner-bg);
-    font-size: 3rem;
+    margin-right: auto;
+    font-style: arial;
     font-weight: bold;
     align-self: end; /* Placerer det nederst i grid */
   }
+  .box5 {
+    grid-template-columns: 1fr 1.6fr 1fr; /* Tre kolonner: en smal, en bred, og en smal */
+    padding-block: 2rem;
+  }
+
   .tekst_box5 {
-    font-size: var(--font-p-og-button);
-    text-align: center;
+    padding-inline: 1rem;
   }
 }
 
 /*****box6*****/
 .box6 {
   background-color: var(--color-header);
-  padding: 40px;
+  padding: 5rem;
+}
+
+.tekst_box6 {
+  margin-top: 2rem;
+  background: var(--color-bg);
+  color: var(--color-btn2-font);
+  font-size: 1rem;
+  padding-block: 5px;
+  padding-inline: 10px;
+  margin-inline: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s ease;
+  border: none;
+  background-color: rgb(154, 170, 150);
 }
 
 .konsultation_img {
   display: grid;
   grid-template-columns: 1fr; /* En kolonne */
-  justify-items: center; /* Juster billedet i midten af grid-cellen */
   width: 100%;
-  height: auto;
+  height: 150%;
   align-self: center; /* Juster billedet i midten af grid-cellen */
+}
+
+@media (min-width: 768px) {
+  .konsultation_img {
+    width: 80%;
+    height: auto;
+    align-self: center; /* Juster billedet i midten af grid-cellen */
+    margin-inline: 9rem;
+  }
+
+  /* man skal lave grid for at få 2 elementer op på hinanden! og så SKAL man bruge position absoulut og relative for det virker!!*/
+  .box6 {
+    position: relative;
+  }
+  .tekst_box6 {
+    position: absolute; /*gør at teksten placerer sig ovenpå*/
+    left: 60%;
+    bottom: 10%;
+    transform: translate(-50%, -50%);
+    padding: 2rem;
+    background-color: var(--color-bg);
+  }
 }
 
 /****box7*****/
 .box7 {
-  background-color: var(--color-bg);
+  background-color: var(--color-box-bg);
+}
 
-  .tekst_box7 {
-    margin-top: 2rem;
-    text-align: center;
-    font-size: var(--font-p-og-button);
+.grid_1-1-1-1_box7 {
+  background-color: var(--color-box-bg);
+  margin-block: 2rem;
+}
+.box7 p {
+  text-align: center;
+}
+
+.h3_box7 {
+  text-align: center;
+  margin-top: 3rem;
+  font-style: bold;
+}
+.iconer_img_box7 {
+  width: 150px;
+  height: auto;
+}
+
+.iconer_box7 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 2rem;
+  background-color: var(--color-box-bg);
+}
+
+.overskrift_box7 {
+  text-align: center;
+
+  padding-block: 1rem;
+  background-color: var(--color-bg);
+  border: var(--color-banner-bg) 1px solid;
+}
+
+@media (min-width: 768px) {
+  .grid_1-1-1-1_box7 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2rem;
+    background-color: var(--color-box-bg);
   }
-  .button2 {
+  .iconer_box7 {
+    background-color: var(--color-box-bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    text-align: center;
+    position: relative;
+  }
+  .iconer img {
+    width: 200px;
+    height: 150px;
+  }
+  .h3_box7 {
+    display: none;
+  }
+
+  .box7 {
+    border: 20px solid var(--color-header);
   }
 }
