@@ -6,7 +6,7 @@
 html::before {
   content: "";
   inset: 0;
-  background-color: #164b7a;
+  background-color: #acc9cc;
 
   /* block size det er højden, (en anden måde at skrive højde på) som sørger for at den opfører sig som en lille kasse */
   block-size: 4px;
