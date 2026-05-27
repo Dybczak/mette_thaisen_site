@@ -109,7 +109,7 @@ html::before {
 
 .kropsterapi-mobil h1 {
   padding: 8px 16px 8px 16px;
-  background-color: #acc9cc;
+  background-color: #cc9c5a;
   width: 100%;
 }
 
@@ -188,7 +188,7 @@ html::before {
 
 /* giver elementet baggrundsfarve, og tekst farve. Sætter igen margin-inline: -100px på for at få div´en hele ud til kanterne. */
 .citat {
-  background-color: #83a2a4;
+  background-color: var(--color-banner-bg);
   color: white;
   padding: 20px;
 }
@@ -253,7 +253,7 @@ html::before {
   .kropsterapi-desktop {
     grid-column: 1;
     grid-row: 2;
-    background-color: #acc9cc;
+    background-color: ##cc9c5a;
     border-radius: var(--border-radius-title-box);
   }
 
