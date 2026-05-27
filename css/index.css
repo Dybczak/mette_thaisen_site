@@ -116,7 +116,7 @@ html::before {
 /* for at undgå at give en class (giver bedre overblik i min css) går jeg ind i den første div ved at sige div:first-of-type og ind i det første p ved at sige p:first-of-type */
 .kropsterapi-mobil p {
   padding: 0px 16px 8px 16px;
-  background-color: #acc9cc;
+  background-color: var(--color-banner-bg);
   width: 100%;
   margin-bottom: 80px;
 }
