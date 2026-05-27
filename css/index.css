@@ -136,14 +136,14 @@ html::before {
   align-items: center;
   justify-content: center;
   padding: 40px 10px 40px 10px;
-  background-color: #a3aa82;
+  background-color: #d5b991;
 }
 
 /******************************* Om mig kasse ********************************/
 
 /* laver baggrundsfarve */
 .teaser {
-  background-color: var(--color-box-bg);
+  background-color: #9aaa96;
   margin-block: 100px;
   padding-bottom: 20px;
   margin-inline: 30px;
