@@ -109,7 +109,7 @@ html::before {
 
 .kropsterapi-mobil h1 {
   padding: 8px 16px 8px 16px;
-  background-color: #cc9c5a;
+  background-color: var(--color-banner-bg);
   width: 100%;
 }
 
@@ -253,7 +253,7 @@ html::before {
   .kropsterapi-desktop {
     grid-column: 1;
     grid-row: 2;
-    background-color: ##cc9c5a;
+    background-color: var(--color-banner-bg);
     border-radius: var(--border-radius-title-box);
   }
 
