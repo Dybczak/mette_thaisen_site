@@ -239,8 +239,8 @@ header {
   position: sticky;
   top: 0;
   display: flex;
-  background-color: var(--color-header);
   justify-content: space-between;
+  background-color: var(--color-header);
   padding: 10px 80px 10px 30px;
   box-shadow: var(--box-shadow-header);
   z-index: 1000;
