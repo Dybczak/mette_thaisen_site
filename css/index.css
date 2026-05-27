@@ -265,6 +265,7 @@ html::before {
   p {
     padding-inline: 30px;
     padding-block: 10px;
+    color: white;
   }
 
   .grid1-2 p {
