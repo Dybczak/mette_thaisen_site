@@ -92,7 +92,7 @@ h2 {
 /******************** SECTION 3 ********************/
 
 .min-uddannelse-kasse {
-  background-color: #c9d0a6;
+  background-color: var(--color-box-bg);
   margin-block: 80px;
   border-radius: var(--border-radius-box);
   margin-inline: 30px;
